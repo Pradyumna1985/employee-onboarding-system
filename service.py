@@ -2,20 +2,8 @@
 
 from datetime import date
 
-try:
-    from . import content
-    from .models import (
-        ChecklistItem,
-        DayPlan,
-        EmployeeForm,
-        FaqItem,
-        OnboardingPack,
-        TrainingResource,
-        WelcomeEmail,
-    )
-except ImportError:
-    import content
-    from models import ChecklistItem, DayPlan, EmployeeForm, FaqItem, OnboardingPack, TrainingResource, WelcomeEmail
+import content
+from models import ChecklistItem, DayPlan, EmployeeForm, FaqItem, OnboardingPack, TrainingResource, WelcomeEmail
 
 
 def _employee_role(employee: EmployeeForm) -> str:
@@ -177,3 +165,4 @@ def build_markdown_pack(pack: OnboardingPack) -> str:
     )
     lines.append("")
     return "\n".join(lines)
+

@@ -42,7 +42,7 @@ if errorlevel 1 goto :failed
 call ".venv\Scripts\activate.bat"
 if errorlevel 1 goto :failed
 
-pyinstaller --onefile --name "OnboardingSystem" --add-data "static;static" "app.py"
+pyinstaller --clean --paths . --hidden-import server --hidden-import service --hidden-import content --hidden-import models --hidden-import views --onefile --name "OnboardingSystem" --add-data "static;static" "app.py"
 if errorlevel 1 goto :failed
 
 echo.
@@ -55,3 +55,4 @@ echo.
 echo The build stopped because a step failed. Review the message above.
 pause
 exit /b 1
+

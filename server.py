@@ -7,14 +7,9 @@ from pathlib import Path
 from typing import Mapping
 from urllib.parse import parse_qs, urlsplit
 
-try:
-    from .models import EmployeeForm
-    from .service import build_markdown_pack, generate_onboarding_pack, generate_welcome_email, validate_employee_form
-    from .views import render_error_page, render_form, render_results
-except ImportError:
-    from models import EmployeeForm
-    from service import build_markdown_pack, generate_onboarding_pack, generate_welcome_email, validate_employee_form
-    from views import render_error_page, render_form, render_results
+from models import EmployeeForm
+from service import build_markdown_pack, generate_onboarding_pack, generate_welcome_email, validate_employee_form
+from views import render_error_page, render_form, render_results
 
 
 class OnboardingRequestHandler(BaseHTTPRequestHandler):
@@ -128,3 +123,4 @@ def make_server(host: str, port: int, static_dir: Path | None = None) -> Threadi
     server = ThreadingHTTPServer((host, port), handler)
     server.daemon_threads = True
     return server
+

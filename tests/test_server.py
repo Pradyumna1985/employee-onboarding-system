@@ -8,10 +8,7 @@ from urllib.error import HTTPError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-try:
-    from onboarding.server import make_server
-except ImportError:
-    from server import make_server
+from server import make_server
 
 
 class OnboardingServerTests(unittest.TestCase):
@@ -100,3 +97,4 @@ class OnboardingServerTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

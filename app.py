@@ -4,10 +4,7 @@ import sys
 import webbrowser
 from pathlib import Path
 
-try:
-    from .server import make_server
-except ImportError:
-    from server import make_server
+from server import make_server
 
 
 def resource_path(relative_path: str) -> Path:
@@ -42,3 +39,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+

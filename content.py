@@ -1,9 +1,6 @@
 """Rule-based role and department content used by the onboarding service."""
 
-try:
-    from .models import ChecklistItem, FaqItem, TrainingResource
-except ImportError:
-    from models import ChecklistItem, FaqItem, TrainingResource
+from models import ChecklistItem, FaqItem, TrainingResource
 
 
 ROLE_OPTIONS: tuple[str, ...] = (
@@ -208,4 +205,6 @@ COMPULSORY_TRAINING: tuple[TrainingResource, ...] = (
     TrainingResource("Compliance essentials", "Complete the required compliance and workplace policy course.", "Compulsory"),
     TrainingResource("Code of conduct", "Read and acknowledge the company's code of conduct.", "Compulsory"),
 )
+
+
 

@@ -2,27 +2,15 @@
 
 import unittest
 
-try:
-    from onboarding.models import EmployeeForm
-    from onboarding.service import (
-        generate_document_checklist,
-        generate_faqs,
-        generate_it_access_checklist,
-        generate_onboarding_plan,
-        generate_training_resources,
-        generate_welcome_email,
-    )
-except ImportError:
-    from models import EmployeeForm
-    from service import (
-        generate_document_checklist,
-        generate_faqs,
-        generate_it_access_checklist,
-        generate_onboarding_plan,
-        generate_training_resources,
-        generate_welcome_email,
-    )
-
+from models import EmployeeForm
+from service import (
+    generate_document_checklist,
+    generate_faqs,
+    generate_it_access_checklist,
+    generate_onboarding_plan,
+    generate_training_resources,
+    generate_welcome_email,
+)
 
 class OnboardingServiceTests(unittest.TestCase):
     """Check section content, personalization, and fallback behavior."""
@@ -77,3 +65,4 @@ class OnboardingServiceTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

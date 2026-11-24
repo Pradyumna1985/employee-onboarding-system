@@ -3,12 +3,8 @@
 from html import escape
 from typing import Mapping
 
-try:
-    from . import content
-    from .models import ChecklistItem, EmployeeForm, OnboardingPack
-except ImportError:
-    import content
-    from models import ChecklistItem, EmployeeForm, OnboardingPack
+import content
+from models import ChecklistItem, EmployeeForm, OnboardingPack
 
 
 def _esc(value: object) -> str:
@@ -163,5 +159,8 @@ def render_results(pack: OnboardingPack) -> str:
 def render_error_page(message: str) -> str:
     """Render a small escaped error page for unsupported routes."""
     return _page("Request not found", f"<h1>Request not available</h1><p>{_esc(message)}</p><p><a href=\"/\">Return to the form</a></p>")
+
+
+
 
 
