@@ -1,3 +1,7 @@
+# Employee Onboarding System
+
+Generates a complete onboarding pack for a new hire from their name, role, department and start date: a welcome email, a 7-day plan, a documents checklist, an IT access checklist, FAQs and training resources. It runs locally on your own PC, uses no external services and needs no internet connection. The pack can be downloaded as a .txt email and a .md file.
+
 ## Download (Windows)
 
 1. Go to the [Releases page](https://github.com/Pradyumna1985/employee-onboarding-system/releases) and download **OnboardingSystem.exe** under Assets.
