@@ -22,3 +22,10 @@ You need Python 3.10 or newer, installed with "Add python.exe to PATH" ticked.
 3. Your app appears at `dist\OnboardingSystem.exe`.
 
 To run it without building, double-click `run-windows.bat`. To run the tests, use `py -m unittest discover`.
+
+## Troubleshooting
+
+- **The page doesn't load:** the app tries port 8080 first, then 8081 to 8090. Check the black console window for the exact address it printed.
+- **The black window closes straight away:** another copy may already be running, or the file was blocked. Run it from Command Prompt to see the error message.
+- **"Python was not found" when building:** install Python from https://www.python.org/downloads/ and tick "Add python.exe to PATH". Ignore the Microsoft Store shortcut.
+- **SmartScreen or antivirus warning:** the .exe is unsigned. Choose "More info", then "Run anyway".
